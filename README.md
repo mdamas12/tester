@@ -1,5 +1,5 @@
 ## Contenido
-Este proyecto tiene dos ramas: apimovies y webmovies.
+Este proyecto tiene dos Carpetas: apimovies y webmovies.
  + apimovies contienes el desarrollo backend de la prueba, realizado en Express, mysql, ORM  Sequelize y JWT. 
  + webmovies contiene en desarrollo Frontend de la prueba realizado en Angularjs, Html, css, javascripts y bootstrap.
 
