@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html ng-app="myapp">
+<head>
+    <meta charset="utf-8">
+    <title>Tester - Register</title>
+    <meta name="keywords" content="Frontend" />
+    <meta name="description" content="Test">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Libs CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/font-awesome.min.css" rel="stylesheet" />
+    <link href="css/streamline-icon.css" rel="stylesheet" />
+    <link href="css/v-nav-menu.css" rel="stylesheet" />
+    <link href="css/v-portfolio.css" rel="stylesheet" />
+    <link href="css/v-blog.css" rel="stylesheet" />
+    <link href="css/v-animation.css" rel="stylesheet" />
+    <link href="css/v-bg-stylish.css" rel="stylesheet" />
+    <link href="css/v-shortcodes.css" rel="stylesheet" />
+    <link href="css/theme-responsive.css" rel="stylesheet" />
+    <link href="plugins/owl-carousel/owl.theme.css" rel="stylesheet" />
+    <link href="plugins/owl-carousel/owl.carousel.css" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/custom.css">
+
+    <!-- Form Elements -->
+    <link href="css/v-form-element.css" rel="stylesheet" />
+
+    <style>
+        .input-group {
+            margin-bottom: 12px;
+        }
+    </style>
+    </head>
+    <body class="background-login" ng-controller="registerController" >
+        <!--Header-->
+        <!--End Header-->
+     {{"hola "+ "nombre"}}
+        <div class="container">
+          <div class="page-login">
+             <div class="row">
+                 <div class="col-md-12">
+                     <div class="logo-login">
+                           <!-- <img src="img/pukiebook/images/android-chrome-192x192.png"  class="img-responsive center-block" alt="pukiebook"> -->
+                           <a href="#"><h1>Tester Movies</h1></a>
+                     </div>
+                  </div>
+              </div>
+           <div class="row">
+              <div class="login-area">
+                <div class="col-md-12">
+                  <h2>Registrar una nueva cuenta</h2>
+                </div>
+
+                <div class="form-group">
+                   <div class="col-md-12">
+                       <label for="exampleInputEmail1"><strong>Nombre Completo</strong></label>
+                  </div>
+                  <div class="col-md-12">
+                    <div class="input-group input-group-icon">
+                        <input type="text" class="form-control"  placeholder="Nombre Completo" ng-model="username" auticomplete ="off">
+                        <span class="input-group-addon">
+                            <span class="icon"><i class="fa fa-user"></i></span>
+                        </span>
+                    </div>
+                    <!-- <div ng-show="fullname" class="alert alert-warning">Debe Escribir Su Nombre</div> -->
+                    </div>
+                    <div class="col-md-12">
+                      <label for="email"><strong>Email</strong></label>
+                    </div>
+                    <div class="col-md-12">
+                      <div class="input-group input-group-icon email" >
+                          <input type="text"  class="form-control"  name="email" ng-model="email" placeholder="me@example.com" >
+                          <span class="input-group-addon">
+                              <span class="icon"><i class="fa fa-envelope"></i></span>
+                          </span>
+                      </div>
+                    </div>
+
+                    <div class="col-md-12">
+                      <label for="exampleInputEmail1"><strong>Contraseña</strong></label>
+                    </div>
+                    <div class="col-md-12">
+                      <div class="input-append input-group">
+                          <input type="password" class="form-control"  placeholder="Contraseña" id="password" ng-model="password" name="password">
+                          <span class="input-group-addon">
+                             <span  tabindex="100" title="Click here to show/hide password"  id="view-pass" style="cursor: pointer;"><i  class="fa fa-eye" aria-hidden="true"></i></span>
+                          </span>
+                      </div>
+                    </div>
+
+                    <div class="col-md-12">
+                      <label for="exampleInputEmail1"><strong>Confirmar Contraseña</strong></label>
+                    </div>
+
+                  <div class="col-md-12">
+                    <button type="button" ng-click="register()" class="btn btn-primary">Registar</button>
+                  </div>
+                  <div class="col-sm-12 loading" ng-show="loading">
+                   <!-- <img src="img/loading.gif" style="width: 20%; height: 20%;" alt="loading"> -->
+                  </div>
+                  <div class="col-md-12">
+                    <button type="button"  class="btn btn-link">Ya Tengo una cuenta </button>
+                  </div>
+                </div>
+
+            </div>
+          </div>
+          </div>
+       </div>
+    </body>
+</html>
+<script type="text/javascript"
+  src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.min.js">
+</script>
+<script type="text/javascript"  src="../controllers/registerController.js"> </script>
+
+
+
+<script src="js/jquery-3.1.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.flexslider-min.js"></script>
+<script src="js/jquery.easing.js"></script>
+<script src="js/jquery.fitvids.js"></script>
+<script src="js/jquery.carouFredSel.min.js"></script>
+<script src="js/jquery.validate.js"></script>
+<script src="js/theme-plugins.js"></script>
+<script src="js/jquery.isotope.min.js"></script>
+<script src="js/imagesloaded.js"></script>
+<script src="js/view.min.js?auto"></script>
+<script src="js/theme-core.js"></script>

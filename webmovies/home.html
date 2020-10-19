@@ -1,0 +1,162 @@
+
+
+                  <div class="v-page-wrap has-right-sidebar has-one-sidebar">
+
+                      <div class="container">
+
+                          <div class="row">
+
+                              <div class="col-sm-11">
+
+                                  <div class="row">
+                                      <!-- <div class="col-sm-12">
+                                          <h3 class="no-margin-top">Hola Marcos</h3>
+                                      </div> -->
+                                    <div class="col-sm-12">
+                                    <div class="panel-group">
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading">
+                                            <h4 class="panel-title">
+                                                <a class="accordion-toggle collapsed" data-toggle="collapse" href="#collapseThreex" aria-expanded="false">
+                                                    <i class="fa fa-star-o"></i>
+                                                    your favorites list
+                                                </a>
+                                            </h4>
+                                        </div>
+                                        <div id="collapseThreex" class="accordion-body collapse" aria-expanded="false" style="height: 0px;">
+                                            <div class="panel-body">
+                                              <ul class="v-search-items" ng-repeat="listFav in listFavorites">
+
+                                                  <li class="search-item">
+                                                      <div class="search-item-img">
+                                                          <a href="#">
+                                                              <img alt="Nexus" src={{listFav.poster}} width="70" height="70">
+                                                          </a>
+                                                      </div>
+
+                                                      <div class="search-item-content">
+                                                          <h3 class="search-item-caption">{{listFav.tittle}}</h3>
+
+                                                          <div class="search-item-meta">
+                                                              <ul class="list-inline">
+                                                                  <li class="span">Year : {{listFav.year}}‎</li>
+                                                              </ul>
+                                                          </div>
+                                                          <h5>{{listFav.imdrId}}</h5>
+
+
+                                                          <div class="search-item-meta-down">
+                                                             <button type="button" ng-click="deletefavorite_list()" class="btn v-btn v-btn-default v-small-button"><i class="fa fa-fire"></i>remove from my list</button>
+
+                                                          </div>
+                                                      </div>
+                                                  </li>
+                                              </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+
+                                      <div class="col-sm-12">
+                                          <div class="v-search-widget">
+                                              <!-- <form role="search" method="get" id="Form1" class="searchform" action="#" ng-click="search()"> -->
+
+                                                  <div class="form-group">
+                                                    <div class="row">
+                                                    <div class="col-sm-8">
+                                                      <input class="form-control" ng-model="tittle"  type="text" name="s" id="s"  />
+                                                     </div>
+                                                     <div class="col-sm-4">
+                                                     <button type="button" ng-click="search()" class="btn v-btn special-icon v-green-sea"><i class="fa fa-eye"></i>Buscar</button>
+                                                    </div>
+                                                  </div>
+                                                  </div>
+                                                  <div class="col-sm-12">
+                                                      <div class="alert alert-error"  ng-show="alert_error">
+                                                          <div class="messagebox_text">
+                                                              <p><strong>Error</strong>:{{message}}</p>
+                                                          </div>
+                                                      </div>
+                                                  </div>
+                                              <!-- </form> -->
+                                          </div>
+                                      </div>
+                                    <h1 class="v-lead">Movies search</h1>
+                                      <div class="v-spacer col-sm-12 v-height-mini"></div>
+
+                                      <div class="col-sm-12">
+
+                                          <div class="v-heading-v2">
+                                              <!-- <h4 class="v-search-result-count">About 18,580 results</h4> -->
+                                          </div>
+                                      </div>
+
+
+                                  <div class="row">
+
+                                      <div class="col-sm-12">
+                                          <ul class="v-search-items" ng-repeat="movie in Movies">
+                                              <li class="search-item" >
+                                                  <div class="search-item-img">
+                                                      <a href="#">
+                                                          <img alt="Nexus" src={{movie.Poster}} width="70" height="70">
+                                                      </a>
+                                                  </div>
+
+                                                  <div class="search-item-content">
+                                                      <h3 class="search-item-caption"><a href="#"> {{movie.Title}}</a></h3>
+
+                                                      <div class="search-item-meta">
+                                                          <ul class="list-inline">
+                                                              <li class="span">Year : {{movie.Year}}‎</li>
+                                                          </ul>
+                                                      </div>
+                                                      <h5>{{movie.imdbID}}</h5>
+
+
+                                                      <div class="search-item-meta-down" ng-if="movie.favorite == true">
+                                                          <ul class="list-inline">
+                                                              <li>
+                                                                  <ul class="list-inline star-vote">
+                                                                      <li><i class="color-green fa fa-star"></i></li>
+                                                                      <li><i class="color-green fa fa-star"></i></li>
+                                                                      <li><i class="color-green fa fa-star"></i></li>
+                                                                      <li><i class="color-green fa fa-star"></i></li>
+                                                                      <li><i class="color-green fa fa-star"></i></li>
+                                                                  </ul>
+                                                              </li>
+                                                              <li>it's on your list</li>
+                                                              <li><button type="button" ng-click="deletefavorite_movies()"  class="btn v-btn v-btn-default v-small-button"><i class="fa fa-fire"></i>remove from my list</button></li>
+                                                          </ul>
+                                                      </div>
+                                                      <div class="search-item-meta-down" ng-if="movie.favorite == false">
+                                                          <ul class="list-inline">
+                                                              <!-- <li>it's on your list</li> -->
+                                                              <li><button type="button" ng-click="addfavorite()" class="btn v-btn v-btn-default v-small-button"><i class="fa fa-fire"></i>add to my list</button></li>
+                                                          </ul>
+                                                      </div>
+                                                  </div>
+                                              </li>
+                                          </ul>
+                                      </div>
+                                    </div>
+
+                                  </div>
+
+                                      <!-- <div class="col-sm-12">
+                                          <ul class="pagination pagination-lg">
+                                              <li class="active"><a href="#">1</a></li>
+                                              <li><a href="#">2</a></li>
+                                              <li><a href="#">3</a></li>
+                                              <li><a href="#">4</a></li>
+                                              <li><a href="#">...</a></li>
+                                              <li><a href="#">40</a></li>
+                                              <li><a href="#">41</a></li>
+                                              <li><a href="#">Next <i class="fa fa-angle-right"></i></a></li>
+                                          </ul>
+                                      </div> -->
+                                  </div>
+                              </div>
+                            </div>
+                          </div>
